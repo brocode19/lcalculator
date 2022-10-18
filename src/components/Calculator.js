@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Doughnut, Pie } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import 'chart.js/auto';
 import Input from './Input'
 import Loan from "./Loan";

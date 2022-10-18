@@ -27,6 +27,8 @@
   
     --box-shadow: 0 2rem 3rem var(--colour-light)
   }
+
+  /* total css */
   
   .data-input{
 
@@ -54,4 +56,12 @@
     background-color: white;
     padding: var(--card-padding);
 
+
+  }
+
+  /* Button css */
+
+  .loan-buttons{
+    display: flex;
+    gap: 0.8rem;
   }
