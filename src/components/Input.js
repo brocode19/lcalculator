@@ -17,31 +17,31 @@ function Input(props) {
             props.setMonthlyPayment(loanValues.installments[0].installment)
   
         props.setInstallments(loanValues.installments);
-        props.setInterestGraph({
-          labels: ['principal', 'interest'],
-          datasets: [
-            {
-              label: '# of Votes',
-              data: [loanValues.capitalSum,loanValues.interestSum],
-              backgroundColor: [
+        // props.setInterestGraph({
+        //   labels: ['principal', 'interest'],
+        //   datasets: [
+        //     {
+        //       label: '# of Votes',
+        //       data: [loanValues.capitalSum,loanValues.interestSum],
+        //       backgroundColor: [
         
-                'red',
-                'blue',
-             // '#41f1b6'
-                // 'rgba(255, 99, 132, 0.2)',
-                // 'rgba(54, 162, 235, 0.2)',
+        //         'red',
+        //         'blue',
+        //      // '#41f1b6'
+        //         // 'rgba(255, 99, 132, 0.2)',
+        //         // 'rgba(54, 162, 235, 0.2)',
       
                 
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
+        //       ],
+        //       borderColor: [
+        //         'rgba(255, 99, 132, 1)',
+        //         'rgba(54, 162, 235, 1)',
       
-              ],
-              borderWidth: 1,
-            },
-          ],
-        })
+        //       ],
+        //       borderWidth: 1,
+        //     },
+        //   ],
+        // })
   
         console.log(loanValues);
         
@@ -63,31 +63,31 @@ function Input(props) {
           Months:'',
         })
   
-        props.setInterestGraph({
-          labels: ['principal', 'interest'],
-          datasets: [
-            {
-              label: '# of Votes',
-              data: [10,1],
-              backgroundColor: [
+        // props.setInterestGraph({
+        //   labels: ['principal', 'interest'],
+        //   datasets: [
+        //     {
+        //       label: '# of Votes',
+        //       data: [10,1],
+        //       backgroundColor: [
         
-                'red',
-                'blue',
-             // '#41f1b6'
-                // 'rgba(255, 99, 132, 0.2)',
-                // 'rgba(54, 162, 235, 0.2)',
+        //         'red',
+        //         'blue',
+        //      // '#41f1b6'
+        //         // 'rgba(255, 99, 132, 0.2)',
+        //         // 'rgba(54, 162, 235, 0.2)',
       
                 
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
+        //       ],
+        //       borderColor: [
+        //         'rgba(255, 99, 132, 1)',
+        //         'rgba(54, 162, 235, 1)',
       
-              ],
-              borderWidth: 1,
-            },
-          ],
-        })
+        //       ],
+        //       borderWidth: 1,
+        //     },
+        //   ],
+        // })
   
       }
   
@@ -114,9 +114,6 @@ function Input(props) {
          value={props.data.LoanAmount}
          onChange={handleChange}
           />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">

@@ -30,3 +30,13 @@
   --box-shadow: 0 2rem 3rem var(--colour-light)
 }
 
+.data-input{
+  background-color: var(--color-background);
+  padding: var(--card-padding);
+}
+
+.totatPaymentContainer{
+  background-color: var(--color-background);
+  padding: var(--card-padding);
+}
+
