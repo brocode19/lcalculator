@@ -49,7 +49,7 @@ function Calculator() {
 
         <>
 
-           <div className='container-fluid loanContainer'>
+           <div className='container loanContainer'>
             <div className="container row">
                 <div className="col-4">
                 <div className="data-input container">
@@ -94,38 +94,40 @@ function Calculator() {
             </div>
 
             <div className="row">
-                <div className="container">
 
-                {installments.length > 0 && <table class="projects-table">         
-      <thead>
-        <tr>
-          <th>Month</th>
-          <th>Payment</th>
-          <th>Principal</th>
-          <th>Interest</th>
-          <th>Total Interest</th>
-          <th>Remaining Balance</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-      {installments.map((loanItem, index) => {
-            return (
-              <Loan
-                key={index}
-                id={index}
-                installment={loanItem.installment}
-                principal={loanItem.capital}
-                interest={loanItem.interest}
-                totalInterest={loanItem.interestSum}
-                remainingBalance={loanItem.remain}
-              />
-            );
-          })}
-      </tbody>
-    </table>}
-                    
-                </div>
+              {installments.length > 0 &&                 <div className="container table">
+
+<table class="projects-table">         
+<thead>
+<tr>
+<th>Month</th>
+<th>Payment</th>
+<th>Principal</th>
+<th>Interest</th>
+<th>Total Interest</th>
+<th>Remaining Balance</th>
+</tr>
+</thead>
+<tbody>
+
+{installments.map((loanItem, index) => {
+return (
+<Loan
+key={index}
+id={index}
+installment={loanItem.installment}
+principal={loanItem.capital}
+interest={loanItem.interest}
+totalInterest={loanItem.interestSum}
+remainingBalance={loanItem.remain}
+/>
+);
+})}
+</tbody>
+</table>
+    
+</div> }
+
             </div>
 
            </div>
