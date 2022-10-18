@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Doughnut, Pie } from "react-chartjs-2";
+import 'chart.js/auto';
 import Input from './Input'
 import Loan from "./Loan";
 
@@ -9,11 +11,39 @@ function Calculator() {
         Interst:'',
         Months:''
       });
-        
+
+
       const [installments, setInstallments] = useState([]);
     
       const [totals, setTotals] = useState({})
       const [monthlyPayment, setMonthlyPayment] = useState('');
+
+      const [interestGraph, setInterestGraph] = useState({
+
+        labels: ['Interest', 'Principle'],
+        datasets: [
+          {
+            label: '# of Votes',
+            data: [2,10],
+            backgroundColor: [
+      
+              'red',
+              'blue',
+              // '#41f1b6'
+              // 'rgba(255, 99, 132, 0.2)',
+              // 'rgba(54, 162, 235, 0.2)',
+    
+              
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+    
+            ],
+            borderWidth: 0.6,
+          },
+        ],
+      });
 
       return (
 
@@ -27,7 +57,7 @@ function Calculator() {
               data={data}
               setData={setData}
               setInstallments={setInstallments}
-            //   setInterestGraph={setInterestGraph}
+              setInterestGraph={setInterestGraph}
               setTotals={setTotals}
               setMonthlyPayment={setMonthlyPayment}
               />
@@ -55,7 +85,12 @@ function Calculator() {
                  </div>
                 </div>
                 </div>
-                <div className="col-2"></div>
+                <div className="col-2 container">
+                  <div className="PieGraph container">
+                  <Pie data={interestGraph}/>
+                  </div>
+                  
+                </div>
             </div>
 
             <div className="row">

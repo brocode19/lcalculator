@@ -1,9 +1,3 @@
-.App {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-}
 
 :root{
   --colour-main:#7380ec;
@@ -31,12 +25,14 @@
 }
 
 .data-input{
-  background-color: var(--color-background);
-  padding: var(--card-padding);
+
 }
 
 .totatPaymentContainer{
-  background-color: var(--color-background);
-  padding: var(--card-padding);
+
+}
+
+.PieGraph{
+
 }
 
