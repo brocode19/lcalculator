@@ -66,7 +66,10 @@ function Calculator() {
         <>
 
            <div className='container loanContainer'>
+
+            
             <div className="container row">
+            <h1>Tinashe's Loan Calculator</h1>
                 <div className="col-4">
                 <div className="data-input container">
               <Input
@@ -108,6 +111,14 @@ function Calculator() {
                   
                 </div>
             </div>
+
+            <div className="container loanAdvice">
+            <h3>Loans</h3>
+
+            <p>While shopping for any loan, it’s a good idea to use a loan calculator. A calculator can help you narrow your search for a home or car by showing you how much you can afford to pay each month. It can help you compare loan costs and see how differences in interest rates can affect your payments, especially with mortgages. The right loan calculator will show you the total cost of a loan, expressed as the annual percentage rate, or APR. Loan calculators can answer a lot of questions and help you make good financial decisions.</p>
+            </div>
+
+
 
             <div className="row">
 
