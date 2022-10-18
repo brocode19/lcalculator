@@ -6,6 +6,22 @@ import Loan from "./Loan";
 
 function Calculator() {
 
+  const pieOptions = {
+
+    maintainAspectRatio: false,
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+        },
+        title: {
+          display: true,
+          text: 'Interest Graph',
+          align: 'center'
+        },
+      },
+    };
+
     const [data, setData] = useState({
         LoanAmount:'',
         Interst:'',
@@ -85,9 +101,9 @@ function Calculator() {
                  </div>
                 </div>
                 </div>
-                <div className="col-2 container">
+                <div className="col-2">
                   <div className="PieGraph container">
-                  <Pie data={interestGraph}/>
+                  <Pie data={interestGraph} options={pieOptions}/>
                   </div>
                   
                 </div>
@@ -95,7 +111,7 @@ function Calculator() {
 
             <div className="row">
 
-              {installments.length > 0 &&                 <div className="container table">
+              {installments.length > 0 && <div className="container table">
 
 <table class="projects-table">         
 <thead>

@@ -1,5 +1,5 @@
 .App{
-    background-color: rgb(230, 230, 235);
+    background-color: #dce1eb;
     height: 100vh;
 }
 
@@ -55,6 +55,8 @@
     background-color: white;
     padding: var(--card-padding);
     border-radius: var(--border-radius-2);
+    height: 100%;
+    width: 100%;
   
   }
   

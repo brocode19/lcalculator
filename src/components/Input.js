@@ -18,15 +18,15 @@ function Input(props) {
   
         props.setInstallments(loanValues.installments);
         props.setInterestGraph({
-          labels: ['principal', 'interest'],
+          labels: ['Principal', 'Interest'],
           datasets: [
             {
               label: '# of Votes',
               data: [loanValues.capitalSum,loanValues.interestSum],
               backgroundColor: [
         
-                'red',
                 'blue',
+                'red',
              // '#41f1b6'
                 // 'rgba(255, 99, 132, 0.2)',
                 // 'rgba(54, 162, 235, 0.2)',
@@ -38,7 +38,7 @@ function Input(props) {
                 'rgba(54, 162, 235, 1)',
       
               ],
-              borderWidth: 1,
+              borderWidth: 0.6,
             },
           ],
         })
@@ -64,15 +64,15 @@ function Input(props) {
         })
   
         props.setInterestGraph({
-          labels: ['principal', 'interest'],
+          labels: ['Principal', 'Interest'],
           datasets: [
             {
               label: '# of Votes',
               data: [10,1],
               backgroundColor: [
         
-                'red',
                 'blue',
+                'red',
              // '#41f1b6'
                 // 'rgba(255, 99, 132, 0.2)',
                 // 'rgba(54, 162, 235, 0.2)',
@@ -84,7 +84,7 @@ function Input(props) {
                 'rgba(54, 162, 235, 1)',
       
               ],
-              borderWidth: 1,
+              borderWidth: 0.6,
             },
           ],
         })
