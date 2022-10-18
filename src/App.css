@@ -29,11 +29,16 @@
   }
 
   /* total css */
+
+  .loanContainer{
+    padding-top: 3%;
+  }
   
   .data-input{
 
     background-color: white;
     padding: var(--card-padding);
+    border-radius: var(--border-radius-2);
   
   }
   
@@ -41,6 +46,7 @@
 
     background-color: white;
     padding: var(--card-padding);
+    border-radius: var(--border-radius-2);
   
   }
   
@@ -48,6 +54,7 @@
 
     background-color: white;
     padding: var(--card-padding);
+    border-radius: var(--border-radius-2);
   
   }
   
