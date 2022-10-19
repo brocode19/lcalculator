@@ -73,7 +73,7 @@ function Calculator() {
             
             <div className="container row">
             <h1>Tinashe's Loan Calculator</h1>
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                 <div className="data-input container">
               <Input
               data={data}
@@ -87,7 +87,7 @@ function Calculator() {
               />
             </div>                 
                 </div>
-                <div className="col-6 d-flex " >
+                <div className="col-lg-6 col-md-6 col-sm-12 d-flex " >
                 <div className="totatPaymentContainer container">
 
                 <h3 className="text-center monthly-payment">Your Monthly Payments</h3>
@@ -126,7 +126,7 @@ function Calculator() {
                  </div>
                 </div>
                 </div>
-                <div className="col-2">
+                <div className="col-lg-2 col-md-12 col-sm-12">
                   <div className="PieGraph container">
                   <Pie data={interestGraph} options={pieOptions}/>
                   </div>
