@@ -49,6 +49,12 @@ function Input(props) {
   
           event.preventDefault()
       }
+
+      const showTable = () =>{
+
+        props.setShow(true)
+
+      }
   
       const clear = (e) =>{
   
@@ -145,6 +151,10 @@ function Input(props) {
       <Button onClick={clear} variant="warning" type="submit">
         Reset
       </Button>
+      {props.installments.length > 0 &&<Button size="sm" variant="primary" onClick={showTable}>
+       Amortization Table
+      </Button>}
+
       </div>
 
 

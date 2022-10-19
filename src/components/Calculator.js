@@ -3,8 +3,11 @@ import { Pie } from "react-chartjs-2";
 import 'chart.js/auto';
 import Input from './Input'
 import Loan from "./Loan";
+import { Button, Modal, Table } from "react-bootstrap";
 
 function Calculator() {
+
+  const [show, setShow] = useState(false);
 
   const pieOptions = {
 
@@ -75,10 +78,12 @@ function Calculator() {
               <Input
               data={data}
               setData={setData}
+              installments={installments}
               setInstallments={setInstallments}
               setInterestGraph={setInterestGraph}
               setTotals={setTotals}
               setMonthlyPayment={setMonthlyPayment}
+              setShow={setShow}
               />
             </div>                 
                 </div>
@@ -89,6 +94,7 @@ function Calculator() {
                  <h4 className="text-center">${monthlyPayment}</h4>
 
                  <div className="row">
+
                     <div className="col-6 totalNames">
                        <div className="col-6 text-center">Total Principle</div>
                        <div className="col-6 text-center">Total Principle</div>
@@ -101,6 +107,22 @@ function Calculator() {
                       <div className="col-6 text-center">${totals.interestSum}</div>
                       <div className="col-6 text-center">${totals.sum}</div>
                     </div>
+
+
+
+                    
+
+
+
+                    {/* <div className="container">
+                    <h4 className="text-center">Show amortization schedule</h4>
+                    {/*  
+                    </div> */}
+
+           
+
+
+
                  </div>
                 </div>
                 </div>
@@ -118,13 +140,21 @@ function Calculator() {
             <p>While shopping for any loan, it’s a good idea to use a loan calculator. A calculator can help you narrow your search for a home or car by showing you how much you can afford to pay each month. It can help you compare loan costs and see how differences in interest rates can affect your payments, especially with mortgages. The right loan calculator will show you the total cost of a loan, expressed as the annual percentage rate, or APR. Loan calculators can answer a lot of questions and help you make good financial decisions.</p>
             </div>
 
+            <Modal
+        show={show}
+        onHide={() => setShow(false)}
+        fullscreen={true}
+        aria-labelledby="example-custom-modal-styling-title"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-custom-modal-styling-title">
+          Amortization schedule
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <div className="container table">
 
-
-            <div className="row">
-
-              {installments.length > 0 && <div className="container table">
-
-<table class="projects-table">         
+<Table stipped  class="projects-table">         
 <thead>
 <tr>
 <th>Month</th>
@@ -151,11 +181,13 @@ remainingBalance={loanItem.remain}
 );
 })}
 </tbody>
-</table>
+</Table>
     
-</div> }
+</div>
+        </Modal.Body>
+      </Modal>
 
-            </div>
+
 
            </div>
         
