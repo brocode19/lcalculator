@@ -72,7 +72,7 @@ function Calculator() {
 
             
             <div className="container row">
-            <h1>Tinashe's Loan Calculator</h1>
+            <h2 className="mb-4">Tinashe's Loan Calculator</h2>
                 <div className="col-lg-4 col-md-6 col-sm-12">
                 <div className="data-input container">
               <Input
